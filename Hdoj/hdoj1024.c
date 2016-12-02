@@ -1,38 +1,13 @@
-// acm100042
-#include <stdio.h>
-#include <string.h>
-#define base 100000;
-#define len 10000;
-void multiply(int a[], int num)
-{
-    for (int carry=0,i=len;i>=0;i--)
-    {
-        carry += a[i]*num;
-        a[i] = carry%base;
-        carry /= base
-    }
-}
-
+// hodj1024
+#include<stdio.h>
 int main()
 {
-    int n,j=0;
-    int h[len];
-    while(scanf("%d", &n) && n!=0)
+    int m,n;
+    int num[1000001];
+    while(~scanf("%d %d",&m,&n))
     {
-        memset(h,0,sizeof(int)*len);
-        for(int i=0;i<=n;i++) 
-        {
-            multiply(h, n);
-        }
-        while(h[j]==0)
-        {
-            j++;
-        }
-        for(int i=len;i>=j;i--)
-        {
-            printf("%d", h[i]);
-        }
-        printf("\n");
+        for(int i=0;i<n;i++)
+            scanf("%d",&num[i]);
+        
     }
-    return 0;
 }
